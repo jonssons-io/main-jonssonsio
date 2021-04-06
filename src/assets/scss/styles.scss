@@ -1,0 +1,88 @@
+@use './index' as *;
+
+$border-width: 5px;
+
+
+.left {
+    width: 60vw;
+    background: url('../../src/assets/img/daniel-cheung-ZqqlOZyGG7g-unsplash.jpg') #EFEAE6 bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right {
+    width: 40vw;
+    align-items: center;
+}
+
+hr.divider {
+    width: 80%;
+    border-top: 2px solid #c4c4c4;
+}
+
+.contact-gabrielle, .contact-axel {
+    height: 5vh;
+    .fai {
+        cursor: pointer;
+        font-size: 2rem;
+        &-gabrielle {
+            color: #A63D69;
+        }
+        &-axel {
+            color: green;
+        }
+    }
+}
+
+.profile-bubbles {
+    height: 125px;
+}
+
+.bubble {
+    cursor: pointer;
+    outline-offset: -10px;
+    height: 20vh;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+    }
+
+}
+
+.active {
+    height: 150px;
+    content: "";
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 47%;
+    animation: moveGradient 4s alternate infinite;
+    &:hover {
+        transform: none;
+    }
+}
+
+
+
+
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+// LEGO PAINTER
+// Photo by <a href="https://unsplash.com/@danielkcheung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Cheung</a> on <a href="https://unsplash.com/s/photos/lego?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

@@ -1,0 +1,89 @@
+//Josefine Sans 400, 700
+// Playfair Display 400, 500, 500i
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,500&display=swap');
+
+$josefin: 'Josefin Sans', sans-serif;
+$playfair: 'Playfair Display', serif;
+
+
+h1 {
+    font-family: $josefin;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+h3 {
+    font-family: $playfair;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+p {
+    font-family: $playfair;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.first-double-o {
+    letter-spacing: -0.2em;
+    right: 11%;
+}
+.second-double-o {
+    right: 8.2%;
+}
+
+.firstbounce {
+    position: absolute;
+    animation: firstbounce 2s infinite;
+	-webkit-animation: firstbounce 2s infinite;
+	-moz-animation: firstbounce 2s infinite;
+	-o-animation: firstbounce 2s infinite;
+}
+
+@-webkit-keyframes firstbounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes firstbounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+ 
+
+@keyframes firstbounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.secondbounce {
+    position: absolute;
+    animation: secondbounce 1.6s infinite;
+	-webkit-animation: secondbounce 2s infinite;
+	-moz-animation: secondbounce 2s infinite;
+	-o-animation: secondbounce 2s infinite;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes secondbounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes secondbounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+ 
+
+@keyframes secondbounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
