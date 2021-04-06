@@ -423,7 +423,7 @@ textarea {
 }
 
 .spacer {
-  width: 4rem;
+  width: 6rem;
 }
 
 .section-spacer {
@@ -452,7 +452,7 @@ p {
 
 .first-double-o {
   letter-spacing: -0.1em;
-  right: 10.2%;
+  right: 10.5%;
 }
 
 .second-double-o {
@@ -594,8 +594,8 @@ hr.divider {
   font-size: 80%;
   z-index: 999;
   position: absolute;
-  margin-top: -2.2rem;
-  margin-left: -0.75rem;
+  margin-top: -3rem;
+  margin-left: 0rem;
   background: #AC0230;
   color: #fff;
   padding: 0.5rem 1rem;
