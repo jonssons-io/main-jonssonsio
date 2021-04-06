@@ -20,68 +20,58 @@ hr.divider {
     border-top: 2px solid #c4c4c4;
 }
 
-.contact-gabrielle, .contact-axel {
-    height: 5vh;
-    .fai {
-        cursor: pointer;
-        font-size: 2rem;
-        &-gabrielle {
-            color: #A63D69;
-        }
-        &-axel {
-            color: green;
-        }
-    }
-}
 
-.profile-bubbles {
+.bubble {
     height: 125px;
 }
 
-.bubble {
-    cursor: pointer;
-    outline-offset: -10px;
-    height: 20vh;
-    border-radius: 50%;
-    transition: all .3s ease-in-out;
-    &:hover {
-        transform: scale(1.2);
+.socials {
+    max-width: 10vw;
+    .fai {
+        margin: 0.5em 0.3em 0em 0.3em;
+        cursor: pointer;
+        font-size: 2rem;
+        color: rgb(43, 43, 43)
     }
-
-}
-
-.active {
-    height: 150px;
-    content: "";
-    background: linear-gradient(
-      60deg,
-      hsl(224, 85%, 66%),
-      hsl(269, 85%, 66%),
-      hsl(314, 85%, 66%),
-      hsl(359, 85%, 66%),
-      hsl(44, 85%, 66%),
-      hsl(89, 85%, 66%),
-      hsl(134, 85%, 66%),
-      hsl(179, 85%, 66%)
-    );
-    background-size: 300% 300%;
-    background-position: 0 50%;
-    border-radius: 47%;
-    animation: moveGradient 4s alternate infinite;
-    &:hover {
-        transform: none;
+    .fai-at {
+        background-color: rgb(43,43,43);
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 4px;
+        margin: 1em 0.6em 0em 0.6em;
+        cursor: pointer;
+        .fai-at-inner {
+            color: #fff;
+            font-size: 1.35rem;
+            
+        }
     }
 }
 
 
+// .contact-gabrielle, .contact-axel {
+//     height: 5vh;
+//     .fai {
+//         cursor: pointer;
+//         font-size: 2rem;
+//         &-gabrielle {
+//             color: rgb(43, 43, 43);
+//         }
+//         &-axel {
+//             color: green;
+//         }
+//     }
+// }
 
+// .profile-bubbles {
+//     height: 125px;
+// }
 
+// .bubble {
+//     height: 20vh;
+//     border-radius: 50%;
+// }
 
-@keyframes moveGradient {
-  50% {
-    background-position: 100% 50%;
-  }
-}
 
 
 // LEGO PAINTER
