@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "jonssons-io",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

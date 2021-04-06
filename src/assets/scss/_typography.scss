@@ -9,28 +9,28 @@ $playfair: 'Playfair Display', serif;
 h1 {
     font-family: $josefin;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 h3 {
     font-family: $playfair;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 p {
     font-family: $playfair;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
 }
 
 .first-double-o {
-    letter-spacing: -0.2em;
-    right: 11%;
+    letter-spacing: -0.1em;
+    right: 10.2%;
 }
 .second-double-o {
-    right: 8.2%;
+    right: 7.5%;
 }
 
 .firstbounce {
