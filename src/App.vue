@@ -13,7 +13,10 @@
       <hr class="divider" />
       <div class="section-spacer"></div>
       <section class="contact ms-3">
-        <p>In the meantime, we are happy to connect through other socials.</p>
+        <p>
+          If you want to get in touch about future projects or just to say hi,
+          we are happy to connect through other platforms.
+        </p>
         <div class="section-spacer"></div>
         <div class="contact-cards d-flex justify-space">
           <div class="contact-cards-gabrielle d-flex flex-col align-center">
@@ -38,11 +41,15 @@
                   :icon="['fab', 'linkedin']"
                 />
               </a>
-              <div
-                class="fai-at d-flex justify-center align-center"
-                @click="copy(gab)"
-              >
-                <font-awesome-icon class="fai-at-inner" icon="at" />
+              <div class="email-container" @click="copy(gab)">
+                <font-awesome-icon class="fai fai-gabrielle mt-05" icon="at" />
+                <span
+                  :class="[gabTooltip ? 'active' : '']"
+                  id="copy_tooltip"
+                  aria-live="assertive"
+                  role="tooltip"
+                  >Copied!</span
+                >
               </div>
               <a href="https://gabrielle.jonssons.io" target="_blank">
                 <font-awesome-icon
@@ -74,11 +81,15 @@
                   :icon="['fab', 'linkedin']"
                 />
               </a>
-              <div
-                class="fai-at d-flex justify-center align-center"
-                @click="copy(ax)"
-              >
-                <font-awesome-icon class="fai-at-inner" icon="at" />
+              <div class="email-container" @click="copy(ax)">
+                <font-awesome-icon class="fai fai-axel mt-05" icon="at" />
+                <span
+                  :class="[axTooltip ? 'active' : '']"
+                  id="copy_tooltip"
+                  aria-live="assertive"
+                  role="tooltip"
+                  >Copied!</span
+                >
               </div>
             </div>
           </div>
@@ -95,6 +106,8 @@ export default {
     return {
       gab: "tnoevryyr@wbaffbaf.vb",
       ax: "nkry@wbaffbaf.vb",
+      axTooltip: false,
+      gabTooltip: false,
     };
   },
   methods: {
@@ -106,6 +119,14 @@ export default {
       });
     },
     copy(person) {
+      if (person == this.ax) {
+        this.axTooltip = true;
+        setTimeout(() => (this.axTooltip = false), 3000);
+      }
+      if (person == this.gab) {
+        this.gabTooltip = true;
+        setTimeout(() => (this.gabTooltip = false), 3000);
+      }
       let y = this.decode(person);
       console.log(y);
       const el = document.createElement("textarea");

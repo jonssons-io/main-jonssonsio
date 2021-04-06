@@ -48,29 +48,69 @@ hr.divider {
     }
 }
 
+.email-container {
+    cursor:  pointer;
+}
 
-// .contact-gabrielle, .contact-axel {
-//     height: 5vh;
-//     .fai {
-//         cursor: pointer;
-//         font-size: 2rem;
-//         &-gabrielle {
-//             color: rgb(43, 43, 43);
-//         }
-//         &-axel {
-//             color: green;
-//         }
-//     }
-// }
+#copy_tooltip {
+    display: block;
+    font-size: 80%;
+    z-index: 999;
+    position: absolute;
+    margin-top: -2.2rem;
+    margin-left: -0.75rem;
+    background: #AC0230;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    opacity: 0;        
 
-// .profile-bubbles {
-//     height: 125px;
-// }
+    &.active {
+        -webkit-animation: slide-up 0.15s cubic-bezier(.51, .92, 0.265, 1.55) both;
+                animation: slide-up 0.15s cubic-bezier(.51, .92, 0.265, 1.55) both;
+    }
+    &.inactive {
+        -webkit-animation: slide-up 0.1s cubic-bezier(.250, .460, .450, .940) reverse both;
+                animation: slide-up 0.1s cubic-bezier(.250, .460, .450, .940) reverse both;
+    }
 
-// .bubble {
-//     height: 20vh;
-//     border-radius: 50%;
-// }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        margin-left: -8px;
+        width: 0; height: 0;
+        border-top: 8px solid #AC0230;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+    }
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        -webkit-transform: translateY(0) scale(.8);
+                transform: translateY(0) scale(.8);
+        opacity: 0;         
+    }
+    100% {
+        -webkit-transform: translateY(-35px) scale(1);
+                transform: translateY(-35px) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slide-up {
+    0% {
+        -webkit-transform: translateY(0) scale(.8);
+                transform: translateY(0) scale(.8);
+        opacity: 0;         
+    }
+    100% {
+        -webkit-transform: translateY(-35px) scale(1);
+                transform: translateY(-35px) scale(1);
+        opacity: 1;
+    }
+}
 
 
 
