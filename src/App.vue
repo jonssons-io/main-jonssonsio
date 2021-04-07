@@ -4,7 +4,7 @@
 		<div
 			class="fill-height right d-flex flex-col align-center justify-center"
 		>
-			<h1 class="d-flex" ref="top">
+			<h1 class="d-flex">
 				Coming s<span class="first-double-o firstbounce">o</span
 				><span class="second-double-o secondbounce">o</span>
 				<div class="spacer"></div>
@@ -21,21 +21,7 @@
 				</p>
 				<div class="section-spacer"></div>
 				<div class="contact-cards">
-					<div class="scroll-links">
-						<button
-							class="scroll-link scroll-link-axel"
-							@click="unhide"
-						>
-							Contact
-						</button>
-						<!-- <button class="scroll-link" @click="scrollToElement('gabrielle')">
-              Gabrielle
-            </button> -->
-					</div>
-					<div
-						class="contact-cards-gabrielle align-center"
-						:class="hidden ? 'hide' : ''"
-					>
+					<div class="contact-cards-gabrielle align-center">
 						<img
 							class="bubble"
 							src="./assets/img/GabCrimsonG.png"
@@ -88,8 +74,6 @@
 					</div>
 					<div
 						class="contact-cards-axel d-flex flex-col align-center"
-						:class="hidden ? 'hide' : ''"
-						ref="scroll"
 					>
 						<img
 							class="bubble"
@@ -147,28 +131,9 @@ export default {
 			ax: 'nkry@wbaffbaf.vb',
 			axTooltip: false,
 			gabTooltip: false,
-			hidden: true,
 		}
 	},
 	methods: {
-		scrollToElement() {
-			const el = this.$refs.scroll
-			console.log('scrolling to ', el)
-			console.log('hidden is ', this.hidden)
-			if (el) {
-				el.scrollIntoView({ behavior: 'smooth' })
-				console.log('scrolled ', el)
-			}
-		},
-		unhide() {
-			if (this.hidden == false) {
-				window.scrollTo({ top: 0, behavior: 'smooth' })
-				this.hidden = true
-			} else if (this.hidden == true) {
-				this.scrollToElement()
-				this.hidden = false
-			}
-		},
 		decode(a) {
 			return a.replace(/[a-zA-Z]/g, function (c) {
 				return String.fromCharCode(
