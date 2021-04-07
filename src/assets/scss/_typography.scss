@@ -48,32 +48,45 @@ p {
     }
 }
 
-
-.scroll-links {
-    margin: 0.5em 2em 2em 2em;
-    display: flex;
-    flex-flow: column nowrap;
-    @include mq(sm) {
-        display: none;
-    }
-    .scroll-link {
-        padding: 0.6em 0.3em 0.5em 0.3em;
-        letter-spacing: .2em;
-        font-size: 0.9em;
-        font-weight: 700;
-        font-family: $josefin;
-        text-transform: uppercase;
-        color: white;
+.socials {
+    &-text {
+        color: rgb(70, 70, 70);
         text-align: center;
-        background-color: #3EA77B;
-        border: 1px solid #3EA77B;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        &-axel {
-        margin-bottom: 1em;
     }
+    &-text.touch {
         @include mq(sm) {
             display: none;
+        }
+    }
+    &-text.desktop {
+        display: none;
+        @include mq(sm) {
+            display: block;
+            min-width: 200px;
+        }
+    }
+    &-title {
+        text-transform: uppercase;
+        font-family: $josefin;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+        @include mq(sm) {
+            margin-bottom: 0;
+        }
+    }
+    &-name {
+        font-family: $playfair;
+        font-weight: 500;
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+        @include mq(sm) {
+            margin-top: 0.5em;
+        }
+    }
+    &-text.desktop {
+        display: none;
+        @include mq(sm) {
+            display: block;
         }
     }
 }

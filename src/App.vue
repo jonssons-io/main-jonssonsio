@@ -21,6 +21,12 @@
 				</p>
 				<div class="section-spacer"></div>
 				<div class="contact-cards">
+					<span class="socials-name socials-text touch"
+						>Gabrielle Jonsson</span
+					>
+					<span class="socials-title socials-text touch"
+						>Frontend Developer</span
+					>
 					<div class="contact-cards-gabrielle align-center">
 						<img
 							class="bubble"
@@ -30,6 +36,12 @@
 						<div
 							class="socials d-flex flex-wrap justify-center align-center"
 						>
+							<span class="socials-name socials-text desktop"
+								>Gabrielle Jonsson</span
+							>
+							<span class="socials-title socials-text desktop"
+								>Frontend Developer</span
+							>
 							<a
 								href="https://github.com/gabbijonsson"
 								target="_blank"
@@ -72,6 +84,12 @@
 							</a>
 						</div>
 					</div>
+					<span class="socials-name socials-text touch"
+						>Axel Jonsson</span
+					>
+					<span class="socials-title socials-text touch"
+						>Backend Developer</span
+					>
 					<div
 						class="contact-cards-axel d-flex flex-col align-center"
 					>
@@ -83,6 +101,12 @@
 						<div
 							class="socials d-flex flex-wrap justify-center align-center"
 						>
+							<span class="socials-name socials-text desktop"
+								>Axel Jonsson</span
+							>
+							<span class="socials-title socials-text desktop"
+								>Backend Developer</span
+							>
 							<a
 								href="https://github.com/Axelelele"
 								target="_blank"
