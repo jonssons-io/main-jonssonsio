@@ -4,15 +4,32 @@ $border-width: 5px;
 
 
 .left {
-    width: 60vw;
-    background: url('../../src/assets/img/daniel-cheung-ZqqlOZyGG7g-unsplash.jpg') #EFEAE6 bottom left;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: none;
+    @include mq(md) {
+        display: flex;
+        flex: 0 1 60vw;
+        background: url('../../src/assets/img/jackson-simmer-ZxRHtPacwUY-unsplash.jpg') #EFEAE6 bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @include mq(lg) {
+        background: url('../../src/assets/img/daniel-cheung-ZqqlOZyGG7g-unsplash.jpg') #EFEAE6 bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .right {
-    width: 40vw;
+    width: 100vw;
     align-items: center;
+    margin-top: 2em;
+    @include mq(sm) {
+        margin-top: 3em;
+    }
+    @include mq(md) {
+        margin-top: 0em;
+        flex: 1 0 768px;
+    }
 }
 
 hr.divider {
@@ -20,18 +37,44 @@ hr.divider {
     border-top: 2px solid #c4c4c4;
 }
 
+.contact-cards {
+    display: flex;
+    flex-flow: column nowrap;
+    @include mq(sm) {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    &-gabrielle, &-axel {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 3em;
+        justify-content: center;
+        @include mq(sm) {
+            flex-flow: column nowrap;
+        }
+    }
+}
+
+
 
 .bubble {
-    height: 200px;
+    height: 125px;
+    @include mq(sm) {
+        height: 200px;
+    }
 }
 
 .socials {
-    max-width: 10vw;
+        max-width: 150px;
     .fai {
+        color: rgb(43, 43, 43);
+        font-size: 2rem;
         margin: 0.5em 0.3em 0em 0.3em;
-        cursor: pointer;
-        font-size: 3rem;
-        color: rgb(43, 43, 43)
+        @include mq(sm) {
+            margin: 0.5em 0.3em 0em 0.3em;
+            cursor: pointer;
+            font-size: 3rem;
+        }
     }
     .fai-at {
         background-color: rgb(43,43,43);
@@ -113,6 +156,17 @@ hr.divider {
 }
 
 
+.hide {
+    visibility: hidden;
+    @include mq(sm) {
+        visibility: visible;
+    }
+}
+
+
 
 // LEGO PAINTER
 // Photo by <a href="https://unsplash.com/@danielkcheung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Cheung</a> on <a href="https://unsplash.com/s/photos/lego?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+// LEGO BROKEN
+// Photo by <a href="https://unsplash.com/@simmerdownjpg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jackson Simmer</a> on <a href="https://unsplash.com/s/photos/lego?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

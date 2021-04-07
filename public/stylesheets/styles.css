@@ -361,9 +361,11 @@ textarea {
   padding: 0.2em 0;
 }
 
-.fill-height {
-  height: 100vh;
-  max-height: 100vh;
+@media only screen and (min-width: 960px) {
+  .fill-height {
+    height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .fill-width {
@@ -423,48 +425,135 @@ textarea {
 }
 
 .spacer {
-  width: 6rem;
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  .spacer {
+    display: block;
+    width: 6rem;
+  }
 }
 
 .section-spacer {
-  height: 5vh;
+  height: 1.5em;
+}
+@media only screen and (min-width: 600px) {
+  .section-spacer {
+    height: 2em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .section-spacer {
+    height: 5vh;
+  }
 }
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    letter-spacing: 0.2em;
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 h3 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  width: 30ch;
+  text-align: center;
+  line-height: 1.5rem;
+}
+@media only screen and (min-width: 600px) {
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 p {
   font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
+  max-width: 35ch;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+@media only screen and (min-width: 600px) {
+  p {
+    max-width: 45ch;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+}
+
+.scroll-links {
+  margin: 0.5em 2em 2em 2em;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media only screen and (min-width: 600px) {
+  .scroll-links {
+    display: none;
+  }
+}
+.scroll-links .scroll-link {
+  padding: 0.6em 0.3em 0.5em 0.3em;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  background-color: #3EA77B;
+  border: 1px solid #3EA77B;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.scroll-links .scroll-link-axel {
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 600px) {
+  .scroll-links .scroll-link {
+    display: none;
+  }
 }
 
 .first-double-o {
-  letter-spacing: -0.1em;
-  right: 10.5%;
+  letter-spacing: -0.25em;
+}
+@media only screen and (min-width: 960px) {
+  .first-double-o {
+    right: 202px;
+  }
 }
 
 .second-double-o {
-  right: 7.5%;
+  right: 255px;
+}
+@media only screen and (min-width: 960px) {
+  .second-double-o {
+    right: 144px;
+  }
 }
 
-.firstbounce {
-  position: absolute;
-  animation: firstbounce 2s infinite;
-  -webkit-animation: firstbounce 2s infinite;
-  -moz-animation: firstbounce 2s infinite;
-  -o-animation: firstbounce 2s infinite;
+@media only screen and (min-width: 960px) {
+  .firstbounce {
+    position: absolute;
+    animation: firstbounce 2s infinite;
+    -webkit-animation: firstbounce 2s infinite;
+    -moz-animation: firstbounce 2s infinite;
+    -o-animation: firstbounce 2s infinite;
+  }
 }
 
 @-webkit-keyframes firstbounce {
@@ -500,13 +589,15 @@ p {
     transform: translateY(-15px);
   }
 }
-.secondbounce {
-  position: absolute;
-  animation: secondbounce 1.6s infinite;
-  -webkit-animation: secondbounce 2s infinite;
-  -moz-animation: secondbounce 2s infinite;
-  -o-animation: secondbounce 2s infinite;
-  animation-delay: 0.2s;
+@media only screen and (min-width: 960px) {
+  .secondbounce {
+    position: absolute;
+    animation: secondbounce 1.6s infinite;
+    -webkit-animation: secondbounce 2s infinite;
+    -moz-animation: secondbounce 2s infinite;
+    -o-animation: secondbounce 2s infinite;
+    animation-delay: 0.2s;
+  }
 }
 
 @-webkit-keyframes secondbounce {
@@ -543,15 +634,40 @@ p {
   }
 }
 .left {
-  width: 60vw;
-  background: url("../../src/assets/img/daniel-cheung-ZqqlOZyGG7g-unsplash.jpg") #EFEAE6 bottom left;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  .left {
+    display: flex;
+    flex: 0 1 60vw;
+    background: url("../../src/assets/img/jackson-simmer-ZxRHtPacwUY-unsplash.jpg") #EFEAE6 bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1264px) {
+  .left {
+    background: url("../../src/assets/img/daniel-cheung-ZqqlOZyGG7g-unsplash.jpg") #EFEAE6 bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .right {
-  width: 40vw;
+  width: 100vw;
   align-items: center;
+  margin-top: 2em;
+}
+@media only screen and (min-width: 600px) {
+  .right {
+    margin-top: 3em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .right {
+    margin-top: 0em;
+    flex: 1 0 768px;
+  }
 }
 
 hr.divider {
@@ -559,18 +675,51 @@ hr.divider {
   border-top: 2px solid #c4c4c4;
 }
 
+.contact-cards {
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media only screen and (min-width: 600px) {
+  .contact-cards {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+}
+.contact-cards-gabrielle, .contact-cards-axel {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 3em;
+  justify-content: center;
+}
+@media only screen and (min-width: 600px) {
+  .contact-cards-gabrielle, .contact-cards-axel {
+    flex-flow: column nowrap;
+  }
+}
+
 .bubble {
-  height: 200px;
+  height: 125px;
+}
+@media only screen and (min-width: 600px) {
+  .bubble {
+    height: 200px;
+  }
 }
 
 .socials {
-  max-width: 10vw;
+  max-width: 150px;
 }
 .socials .fai {
-  margin: 0.5em 0.3em 0em 0.3em;
-  cursor: pointer;
-  font-size: 3rem;
   color: #2b2b2b;
+  font-size: 2rem;
+  margin: 0.5em 0.3em 0em 0.3em;
+}
+@media only screen and (min-width: 600px) {
+  .socials .fai {
+    margin: 0.5em 0.3em 0em 0.3em;
+    cursor: pointer;
+    font-size: 3rem;
+  }
 }
 .socials .fai-at {
   background-color: #2b2b2b;
@@ -645,6 +794,14 @@ hr.divider {
     -webkit-transform: translateY(-35px) scale(1);
     transform: translateY(-35px) scale(1);
     opacity: 1;
+  }
+}
+.hide {
+  visibility: hidden;
+}
+@media only screen and (min-width: 600px) {
+  .hide {
+    visibility: visible;
   }
 }
 

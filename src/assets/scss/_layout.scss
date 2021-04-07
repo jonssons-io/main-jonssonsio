@@ -1,6 +1,10 @@
+@use './breakpoints' as *;
+
 .fill-height {
-    height: 100vh;
-    max-height: 100vh;
+    @include mq(md) {
+        height: 100vh;
+        max-height: 100vh;
+    }
 }
 
 .fill-width {
@@ -60,9 +64,19 @@
 }
 
 .spacer {
-    width: 6rem
+    display: none;
+    @include mq(md) {
+        display: block;
+        width: 6rem
+    }
 }
 
 .section-spacer {
-    height: 5vh;
+    height: 1.5em;
+    @include mq(sm) {
+        height: 2em;
+    }
+    @include mq(md) {
+        height: 5vh;
+    }
 }

@@ -1,3 +1,4 @@
+@use './breakpoints' as *;
 //Josefine Sans 400, 700
 // Playfair Display 400, 500, 500i
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,500&display=swap');
@@ -9,36 +10,93 @@ $playfair: 'Playfair Display', serif;
 h1 {
     font-family: $josefin;
     font-weight: 700;
-    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    @include mq(sm) {
+        letter-spacing: 0.2em;
+        font-size: 3rem;
+    }
+    @include mq(md) {
+        font-size: 4rem;
+    }
 }
 h3 {
     font-family: $playfair;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    width: 30ch;
+    text-align: center;
+    line-height: 1.5rem;
+    @include mq(sm) {
+        font-size: 1.2rem;
+    }
 }
 
 p {
     font-family: $playfair;
-    font-size: 1.6rem;
-    line-height: 2.5rem;
+    max-width: 35ch;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    @include mq(sm) {
+        max-width: 45ch;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+}
+
+
+.scroll-links {
+    margin: 0.5em 2em 2em 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    @include mq(sm) {
+        display: none;
+    }
+    .scroll-link {
+        padding: 0.6em 0.3em 0.5em 0.3em;
+        letter-spacing: .2em;
+        font-size: 0.9em;
+        font-weight: 700;
+        font-family: $josefin;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        background-color: #3EA77B;
+        border: 1px solid #3EA77B;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        &-axel {
+        margin-bottom: 1em;
+    }
+        @include mq(sm) {
+            display: none;
+        }
+    }
 }
 
 .first-double-o {
-    letter-spacing: -0.1em;
-    right: 10.5%;
+    letter-spacing: -0.25em;
+    // right: 235px;
+    @include mq(md) {
+        right: 202px;
+    }
 }
 .second-double-o {
-    right: 7.5%;
+    right: 255px;
+    @include mq(md) {
+        right: 144px;
+    }
 }
 
 .firstbounce {
-    position: absolute;
-    animation: firstbounce 2s infinite;
-	-webkit-animation: firstbounce 2s infinite;
-	-moz-animation: firstbounce 2s infinite;
-	-o-animation: firstbounce 2s infinite;
+    @include mq(md) {
+        position: absolute;
+        animation: firstbounce 2s infinite;
+        -webkit-animation: firstbounce 2s infinite;
+        -moz-animation: firstbounce 2s infinite;
+        -o-animation: firstbounce 2s infinite;
+    }
 }
 
 @-webkit-keyframes firstbounce {
@@ -61,12 +119,14 @@ p {
 }
 
 .secondbounce {
-    position: absolute;
-    animation: secondbounce 1.6s infinite;
-	-webkit-animation: secondbounce 2s infinite;
-	-moz-animation: secondbounce 2s infinite;
-	-o-animation: secondbounce 2s infinite;
-    animation-delay: 0.2s;
+    @include mq(md) {
+        position: absolute;
+        animation: secondbounce 1.6s infinite;
+        -webkit-animation: secondbounce 2s infinite;
+        -moz-animation: secondbounce 2s infinite;
+        -o-animation: secondbounce 2s infinite;
+        animation-delay: 0.2s;
+    }
 }
 
 @-webkit-keyframes secondbounce {
