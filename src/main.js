@@ -1,20 +1,20 @@
-import Vue from "vue";
-import App from "./App.vue";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Vue from 'vue'
+import App from './App.vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import {
-  faAt,
-  faExternalLinkSquareAlt,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import "./../public/stylesheets/styles.css";
+	faAt,
+	faExternalLinkSquareAlt,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import './../public/stylesheets/styles.css'
 
-library.add(faGithubSquare, faLinkedin, faAt, faExternalLinkSquareAlt);
+library.add(faGithubSquare, faLinkedin, faAt, faExternalLinkSquareAlt)
 
-Vue.component("font-awesome-icon", FontAwesomeIcon);
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+	render: (h) => h(App),
+}).$mount('#app')

@@ -45,6 +45,8 @@
 							<a
 								href="https://github.com/gabbijonsson"
 								target="_blank"
+								alt="Link to Gabrielles Github"
+								aria-label="Go to Gabrielles Github"
 							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
@@ -54,13 +56,22 @@
 							<a
 								href="https://www.linkedin.com/in/gabbijonsson/"
 								target="_blank"
+								alt="Link to Gabrielles LinkedIn profile"
+								aria-label="Go to Gabrielles LinkedIn profile"
 							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
 									:icon="['fab', 'linkedin']"
 								/>
 							</a>
-							<div class="email-container" @click="copy(gab)">
+							<div
+								class="email-container"
+								@click="copy(gab)"
+								@keyup.enter="copy(gab)"
+								aria-label="Copy Gabrielles e-mail"
+								focusable="true"
+								tabindex="0"
+							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
 									icon="at"
@@ -76,6 +87,8 @@
 							<a
 								href="https://gabrielle.jonssons.io"
 								target="_blank"
+								alt="Link to Gabrielles portfolio website"
+								aria-label="Go to Gabrielles portfolio website"
 							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
@@ -110,6 +123,8 @@
 							<a
 								href="https://github.com/Axelelele"
 								target="_blank"
+								alt="Link to Axels Github"
+								aria-label="Go to Axels Github"
 							>
 								<font-awesome-icon
 									class="fai fai-axel mt-05"
@@ -119,13 +134,22 @@
 							<a
 								href="https://www.linkedin.com/in/jonssonaxel/"
 								target="_blank"
+								alt="Link to Axels LinkedIn profile"
+								aria-label="Go to Axels LinkedIn profile"
 							>
 								<font-awesome-icon
 									class="fai fai-axel mt-05"
 									:icon="['fab', 'linkedin']"
 								/>
 							</a>
-							<div class="email-container" @click="copy(ax)">
+							<div
+								class="email-container"
+								@click="copy(ax)"
+								@keyup.enter="copy(ax)"
+								focusable="true"
+								aria-label="Copy Axels email"
+								tabindex="0"
+							>
 								<font-awesome-icon
 									class="fai fai-axel mt-05"
 									icon="at"
