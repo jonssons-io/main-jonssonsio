@@ -31,7 +31,7 @@
 						<img
 							class="bubble"
 							src="./assets/img/GabCrimsonG.png"
-							alt="Image of Gabrielle"
+							alt="Image of Gabrielle Jonsson, frontend developer in Vue, Svelte and React"
 						/>
 						<div
 							class="socials d-flex flex-wrap justify-center align-center"
@@ -47,6 +47,7 @@
 								target="_blank"
 								alt="Link to Gabrielles Github"
 								aria-label="Go to Gabrielles Github"
+								title="Gabrielle Jonssons GitHub repository for frontend development"
 							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
@@ -58,6 +59,7 @@
 								target="_blank"
 								alt="Link to Gabrielles LinkedIn profile"
 								aria-label="Go to Gabrielles LinkedIn profile"
+								title="Gabrielle Jonssons LinkedIn - Connect with a frontend developer in Gothenburg"
 							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
@@ -89,6 +91,7 @@
 								target="_blank"
 								alt="Link to Gabrielles portfolio website"
 								aria-label="Go to Gabrielles portfolio website"
+								title="Gabrielle Jonssons frontend development portfolio, with projects in Vue, React, Angular and Svelte."
 							>
 								<font-awesome-icon
 									class="fai fai-gabrielle mt-05"
@@ -109,7 +112,7 @@
 						<img
 							class="bubble"
 							src="./assets/img/AxTurquoiseG.png"
-							alt="Image of Axel"
+							alt="Image of Axel Jonsson, backend developer experienced in Java, Python and AWS."
 						/>
 						<div
 							class="socials d-flex flex-wrap justify-center align-center"
@@ -125,6 +128,7 @@
 								target="_blank"
 								alt="Link to Axels Github"
 								aria-label="Go to Axels Github"
+								title="Axel Jonssons GitHub repository for backend development"
 							>
 								<font-awesome-icon
 									class="fai fai-axel mt-05"
@@ -136,6 +140,7 @@
 								target="_blank"
 								alt="Link to Axels LinkedIn profile"
 								aria-label="Go to Axels LinkedIn profile"
+								title="Axel Jonssons LinkedIn - Connect with a backend developer in Gothenburg"
 							>
 								<font-awesome-icon
 									class="fai fai-axel mt-05"
